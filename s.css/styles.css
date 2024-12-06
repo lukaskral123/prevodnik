@@ -1,0 +1,109 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: radial-gradient(circle, #2b1055, #7597de);
+    color: white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.converter {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+}
+
+.converter h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff77ff;
+}
+
+.converter label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.converter input, .converter select {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    appearance: none;
+}
+
+.converter button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    color: white;
+    cursor: pointer;
+    text-shadow: 0 0 10px white;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    animation: pulse 1.5s infinite;
+    transition: transform 0.3s;
+}
+
+.converter button:hover {
+    transform: scale(1.05);
+}
+
+.converter p {
+    font-size: 20px;
+    margin-top: 15px;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff77;
+}
+
+/* Crazy Background Animation */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(#ff0000, #ff9900, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000);
+    animation: rotate 10s linear infinite;
+    z-index: -1;
+}
+
+/* Animace tlačítka */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(255, 255, 255, 0.8);
+    }
+}
+
+/* Animace pozadí */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
