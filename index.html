@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Převodník Teplot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="converter">
+        <h1>Převodník Teplot 🌡️</h1>
+        <label for="inputTemp">Zadej teplotu:</label>
+        <input type="number" id="inputTemp" placeholder="Např. 25">
+        
+        <label for="conversionType">Vyber převod:</label>
+        <select id="conversionType">
+            <option value="CtoF">Celsia na Fahrenheit</option>
+            <option value="FtoC">Fahrenheit na Celsia</option>
+            <option value="CtoK">Celsia na Kelvin</option>
+            <option value="KtoC">Kelvin na Celsia</option>
+        </select>
+
+        <button onclick="convert()">Převést</button>
+        <p id="result"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
